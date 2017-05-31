@@ -49,10 +49,10 @@ Custom Styles
 */
 
 html {
-	height: 100%;
+	min-height: 100%;
 }
 body {
-	height: inherit; 
+	min-height: 100%; 
 }
 
 
@@ -283,7 +283,8 @@ Footer
 */
 
 .footer {
-	padding: 50px 0px 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	display: flex;
 	flex-direction: row; 
 	justify-content: space-between;
