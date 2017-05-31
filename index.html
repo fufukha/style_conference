@@ -12,59 +12,69 @@
 
 <!-- Header -->
 
-	<header class="container group">
+	<header id="top" class="primary-color">
+		<div class="container header">
+			<h1 class="logo">Styles<br>Conference</h1>
 
-		<h1 class="logo">Styles<br>Conference</h1>
+			<div class="header-info">
+				<h3 class="tagline">August 24&ndash;26th &mdash; Chicago, IL</h3>
 
-		<h3 class="tagline">August 24&ndash;26th &mdash; Chicago, IL</h3>
-
-		<nav class="primary-nav">
-			<ul>
-				<li><a href="#">Home</a></li><!--
-				--><li><a href="speakers.html">Speakers</a></li><!--
-				--><li><a href="#">Schedule</a></li><!--
-				--><li><a href="#">Venue</a></li><!--
-				--><li><a href="#">Register</a></li>
-			</ul>
-		</nav>
+				<nav>
+					<ul class="primary-nav nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="speakers.html">Speakers</a></li>
+						<li><a class="inactive" href="#">Schedule</a></li>
+						<li><a class="inactive" href="#">Venue</a></li>
+						<li><a class="inactive" href="#">Register</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</header>
 
 <!--Hero -->
 
-	<section class="container hero">
+	<section class="hero primary-color">
+		<div class="container">
+			<h2>Dedicated to the Craft of Building Websites</h2>
 
-		<h2>Dedicated to the Craft of Building Websites</h2>
+			<p>Suspendisse potenti. Morbi auctor, massa ac scelerisque bibendum, dui neque pellentesque ipsum, nec mollis metus ligula eu urna.</p>
 
-		<p>Suspendisse potenti. Morbi auctor, massa ac scelerisque bibendum, dui neque pellentesque ipsum, nec mollis metus ligula eu urna.</p>
-
-		<a class="btn" href="http://learn.shayhowe.come">Register Now</a>
+			<a class="btn" href="#">Register Now</a>
+		</div>	
 	</section>
 
 <!--Teaser -->
-	<section class="row teaser">
+	<section class="row teaser main">
 
 		<div class="grid">
 
 			<!--Speakers-->
 			<section class="col-1-3">
-				<h4>Speakers</h4>
-				<img src="img/speakers.jpg" alt="Professional Speakers">
+				<a href="speakers.html">
+					<h4>Speakers</h4>
+					<img src="img/speakers.jpg" alt="Professional Speakers">
+				</a>				
 				<h3>World&ndash;Class Speakers</h3>
 				<p>Proin a pretium odio. Etiam semper molestie lobortis. Proin mollis, massa vitae tempor congue, lacus est condimentum.</p>
 			</section><!--
 
 			Schedule
 			--><section class="col-1-3">
-				<h4>Schedule</h4>
-				<img src="img/schedule.jpg" alt="Conference attendees">
+				<a  class="inactive" href="#/">
+					<h4>Schedule</h4>
+					<img src="img/schedule.jpg" alt="Conference attendees">
+				</a>
 				<h3>Three Inspiring Days</h3>
 				<p>Donec dignissim tristique massa, at varius lacus euismod porta. Maecenas finibus eu leo vehicula tincidunt. Morbi non.</p>
 			</section><!--
 
 			Venue
 			--><section class="col-1-3">
-				<h4>Venue</h4>
-				<img src="img/venue.jpg" alt="The Chicago Theatre">
+				<a class="inactive" href="#/">
+					<h4>Venue</h4>
+					<img src="img/venue.jpg" alt="The Chicago Theatre">
+				</a>
 				<h3>The Chicago Theatre</h3>
 				<p>Mauris consequat scelerisque tincidunt. Aenean tempus sapien ex. Nulla at tempus nunc, a tristique mi. Vivamus faucibus.</p>
 			</section>
@@ -74,20 +84,20 @@
 
 <!-- Footer -->
 
-	<footer class="container">
+	<footer class="primary-color">
+		<div class="container footer">
+			<small>&copy; Styles Conference</small>
 
-		<small>&copy; Styles Conference</small>
-
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li><!--
-				--><li><a href="speaks.html">Speakers</a></li><!--
-				--><li><a href="#">Schedule</a></li><!--
-				--><li><a href="#">Venue</a></li><!--
-				--><li><a href="#">Register</a></li>
-			</ul>
-		</nav>
+			<nav>
+				<ul class="nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="speakers.html">Speakers</a></li>
+					<li><a class="inactive" href="#/">Schedule</a></li>
+					<li><a class="inactive" href="#/">Venue</a></li>
+					<li><a class="inactive" href="#/">Register</a></li>
+				</ul>
+			</nav>
+		</div>
 	</footer>
-
 </body>
 </html>

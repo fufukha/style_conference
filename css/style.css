@@ -47,11 +47,14 @@ table {
 Custom Styles
 ================================
 */
+body {
+	height: inherit; 
+}
+
 
 body {
 	font: 300 16px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #888;
-	background-color: #293f50;
 }
 
 /*
@@ -131,23 +134,48 @@ Primary header
 ================================
 */
 
+.header, 
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+header {
+	height: 176px;
+}
+
+.primary-color {
+	background-color: #293f50;
+}
+
 .logo {
-	float: left;
 	color: #fff;
-	border-top: 4px solid #648880;
+	border-top: 4px solid #648880; /*green*/
 	line-height: 44px;
-	padding: 40px 0 30px 0;
-	margin-bottom: 30px;
+	padding-top: 40px;
+	cursor: pointer;
+
+}
+
+.header {
+   height: 132px;
+   position: relative;
+}
+
+.header-info {
+	position: absolute;
+	bottom: 0;
+	right: 30px;
 }
 
 .tagline {
 	text-align: right;
-	margin: 66px 0 20px;
+	margin-bottom: 22px;
 }
 
-.primary-nav {
-	text-transform: uppercase;
-}
+
 
 /*
 ================================
@@ -157,57 +185,64 @@ Hero
 
 .hero {
 	text-align: center;
+	height: 336px;
+	line-height: 44px;
 	padding-top: 30px;
-	padding-bottom: 70px;
 }
 
 .hero p {
 	font-size: 24px;
 	font-weight: 100;
 	color: #fff;
-	line-height: 150%;
-	margin-top: 5px;
-	padding: 5px 40px 60px 40px;
+	margin-bottom: 22px;
 }
 
-.hero-title {
-	background: #a1d4b0; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left, #a1d4b0 , #f5f1d2); /* For Safari 5.1 to 6.0 */
-	background:    -moz-linear-gradient(right, #a1d4b0, #f5f1d2); /* For Firefox 3.6 to 15 */
-	background:      -o-linear-gradient(right, #a1d4b0, #f5f1d2); /* For Opera 11.1 to 12.0 */
-	background:         linear-gradient(to right, #a1d4b0 , #f5f1d2); /* Standard syntax */
+.gradient {
+	background: #88d09d; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left,     #a1d3b0, #f6f1d3); /* For Safari 5.1 to 6.0 */
+	background:    -moz-linear-gradient(right,    #a1d3b0, #f6f1d3); /* For Firefox 3.6 to 15 */
+	background:      -o-linear-gradient(right,    #a1d3b0, #f6f1d3); /* For Opera 11.1 to 12.0 */
+	background:         linear-gradient(to right, #a1d3b0, #f6f1d3); /* Standard syntax */
+	height: 220px;
 }
 
-.hero-title h2 {
-	margin-top: 50px;
+.gradient .secondary-txt-color {
+	color: #888; /*grey*/
 }
 
-.hero-title p {
-	color: #648880;
-	font-weight: 300;
+.gradient h2 {
+	margin-bottom: 10px;
 }
+
 
 
 /*
 ================================
-Teaser
+Teaser  Main
 ================================
 */
 
-.teaser {
-	padding: 80px 0 50px 0;
-	background: #fff;
 
+.main {
+	padding-bottom:80px;
+	background: #fff;
 }
 
-.teaser h4 {
+
+.main h4 {
 	margin-bottom: 30px;
 	font-size: 14px;
 	font-weight: 400;
-	color: #a9b2b9;
+	color: #a9b2b9; /*grey*/
 }
 
-.teaser h3 {
+ 
+.main h3 {
+	margin-bottom: 20px;
+}
+
+
+.main p {
 	margin-bottom: 20px;
 }
 .teaser img {
@@ -217,15 +252,43 @@ Teaser
 	max-width: 100%;
 }
 
+.teaser, .main-wrapper {
+	padding-top: 100px;
+}
+
+.speaker-dets {
+	text-align: center;
+	border: 1px solid #dfe2e5;
+	border-radius: 5px;
+	margin-top: 80px;
+	padding-bottom: 22px;
+}
+
+.speaker-dets img {
+	border-radius: 50%;
+	height: 130px;
+	margin: -65px 0 22px 0;
+	vertical-align: top;
+
+}
+
+
+
+
 /*
 ================================
 Footer
 ================================
 */
 
-footer {
+.footer {
 	padding: 50px 0px 50px;
+	display: flex;
+	flex-direction: row; 
+	justify-content: space-between;
 }
+
+
 
 footer small {
 	vertical-align: text-bottom;
@@ -238,15 +301,20 @@ footer small {
 ================================
 Navigation
 ================================
-*/
-nav {
-	text-align: right;
+*/ 
+.primary-nav {
+	text-transform: uppercase;
 }
 
-nav li {
-	display: inline-block;
-	margin: 0 10px 0 10px;
+.nav li {
+	margin-right: 10px;
 }
+
+.nav li:last-child {
+	margin-right: 0;
+}
+
+
 
 
 /*
@@ -263,18 +331,18 @@ Button
 	letter-spacing: .5px;
 	text-transform: uppercase;
 	display: inline-block;
-	padding: 20px 30px;
+	padding: 10px 30px;
 	cursor: pointer;
 }
 
-.btn a {
+.btn:link,
+.btn:visited {
 	color: #fff;
 }
 
-
 .btn:hover {
 	background: #fff;
-	color: #648880;
+	color: #648880; /*green*/
 }
 
 
@@ -295,7 +363,7 @@ h1 {
 }
 
 h2, h3, small {
-	color: #648880;
+	color: #648880; /*green*/
 }
 h2 {
 	font-size: 36px;
@@ -309,7 +377,13 @@ h4 {
 	text-transform: uppercase;
 }
 
-small {
+.gradient p {
+	font-size: 22px;
+	font-weight: 300;
+}
+
+small, 
+footer .nav {
 	font-size: 14px;
 }
 
@@ -317,6 +391,10 @@ nav {
 	font-size: 14px;
 	font-weight: 400;
 	color: #fff;
+}
+
+footer .nav {
+	font-weight: 300;
 }
 
 strong {
@@ -335,17 +413,34 @@ Links
 ================================
 */
 
-a {
+a, 
+a:visited {
 	text-decoration: none;
-	color: #648880;
+	color: #648880; /*green*/
 }
+
 
 a:hover {
-	color: #a9b2b9;
+	color: #a9b2b9; /*grey*/
 }
 
-a:visited {
-	color: #a9b2b9;
-	font-style: italic;
+.inactive {
+	pointer-events: none;
+    cursor: default;
 }
+
+.nav a:link, 
+.nav a:visited {
+	color: #FFF;
+	font-style: normal;
+}
+
+.nav a:hover {
+	color: #648880; /*green*/ 
+}
+
+.nav a:active {
+	color: #648880; /*green*/
+}
+
 
