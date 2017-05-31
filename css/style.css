@@ -47,6 +47,10 @@ table {
 Custom Styles
 ================================
 */
+
+html {
+	height: 100%;
+}
 body {
 	height: inherit; 
 }
@@ -271,9 +275,6 @@ Teaser  Main
 	vertical-align: top;
 
 }
-
-
-
 
 /*
 ================================
